@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMAKO - Confirmación de reserva</title>
+    <link rel="icon" type="image/x-icon" href="/img/icono.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/qrious@4.0.2/dist/qrious.js"></script>
+</head>
+<body>
+  <nav class="abajo">
+    <div class="logo">LOGO</div>
+  </nav>
+  <div class="specific">
+  <div class="main4">
+     <div class="cajaconfirmacion">
+        <h3>Gracias por realizar una reserva en Omako</h3>
+        <h4>Número de reserva: <strong>XXX</strong></h4>
+        <h4>Escanea este código qr en tienda</h4>
+        
+        <br>
+        <img alt="Código QR" id="codigo">
+        <br>
+        
+        <button class="download" id="btnDescargar" class="btn">Descargar</button>
+        <a href="index.html" class="botonback">Volver a la página de inicio</a>
+         
+            <script>
+            const $imagen = document.querySelector("#codigo"),
+                $boton = document.querySelector("#btnDescargar");
+            new QRious({
+                element: $imagen,
+                value: "", // La URL o el texto
+                size:400,
+                backgroundAlpha: 0, // 0 para fondo transparente
+                foreground: "#d81664", // Color del QR
+                level: "H", // Puede ser L,M,Q y H (L es el de menor nivel, H el mayor)
+            });
+            // $boton.onclick = () => {
+            //     window.print()
+            // }
+            
+        </script>
+        <script>
+            document.querySelector('button').addEventListener('click', function() {
+        html2canvas(document.querySelector('.cajaconfirmacion'), {
+            onrendered: function(canvas) {
+                // document.body.appendChild(canvas);
+              return Canvas2Image.saveAsPNG(canvas);
+            }
+        });
+    });
+        </script>
+        <script src="https://superal.github.io/canvas2image/canvas2image.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+     </div>
+  </div>
+</div>
+</body>
+</html>

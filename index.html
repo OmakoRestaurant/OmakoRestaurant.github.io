@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMAKO - Inicio</title>
+    <link rel="icon" type="image/x-icon" href="/img/icono.ico">
+    <link rel="stylesheet" href="styles.css">
+    <noscript><link rel="stylesheet" href="noscript.css"></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  
+  <div class="main">
+    <section class="main2">
+      <nav>
+        <div class="logo">LOGO</div>
+         <input type="checkbox" id="click">
+         <label for="click" class="menu-btn" >
+           <i class="fas fa-bars"></i>
+         </label>
+         <ul>
+           <li><a href="index.html" class="active">INICIO</a></li>
+           <li><a href="menu.html">MENÚ</a></li>
+           <li><a href="about.html">SOBRE NOSOTROS</a></li>
+           <li><a class="reservas" href="reserva.html">RESERVAS</a></li>
+         </ul>
+      </nav>
+
+      <div class="content">
+        <p class="uno title title1">COMIDA CON</p>
+        <p class="dos title title2">GARROTE</p>
+      </div>
+      <a class="scroll-link" href="#mainarticle">
+        <svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 130" preserveAspectRatio="xMidYMid meet">
+        <g fill="none" fill-rule="evenodd">
+          <rect width="70" height="118" x="1.5" y="1.5" stroke="#FFF" stroke-width="3" rx="36"/>
+          <circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#FFF"/>
+        </g>
+      </svg>
+      </a>
+    </section>
+    </div>
+    <div id="mainarticle" class="mainarticle">
+      <a href="reserva.html" class="botonmain" type="button">RESERVA</a>
+
+    </div>
+
+  <footer>
+      <div class="mainfooter">
+        <div class="cajafooter">
+          <a href="index.html">Inicio</a>
+          <a href="menu.html">Menú</a>
+          <a href="about.html">Sobre Nosotros</a>
+          <a href="reserva.html">Reservas</a>
+        </div>
+        <div class="cajafooter">
+          <p class="link">Newsletter</p>
+          <a href="https://www.martinberasategui.com/es/inicio" target="_blank">Martín Berasategui</a>
+          <p class="link">Franquicias</p>
+          <p class="link">Trabaja con nosotros</p>
+        </div>
+        <div class="cajafooter">
+          <p>Restaurante Omako</p>
+          <p>c/ Lagasca, 48</p>
+          <p>28001, Madrid</p>
+          <p>678 34 53 20</p>
+        </div>
+        <div class="iconosfooter">
+            <ul class="icons">
+              <li><a href="https://twitter.com/OmakoOficial" class="icon brands fa-twitter" ><span class="label">Twitter</span></a></li>
+              <li><a href="https://www.facebook.com/OmakoOficial" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+              <li><a href="https://www.instagram.com/OmakoOficial/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+              <li><a href="https://www.tiktok.com/@OmakoOficiallang=es" class="icon brands fa-tiktok" ><span class="label">Tiktok</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footerexpan">
+      <p>Contacto</p>
+      <p>Política de Privacidad</p>
+      <p>Configurador de Cookies</p>
+      <p>Sitemap</p>
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+      window.addEventListener("scroll",function(){
+      var nav = document.querySelector("nav"); 
+      nav.classList.toggle("abajo",window.scrollY>100);
+      })
+  </script>
+
+</body>
+</html>

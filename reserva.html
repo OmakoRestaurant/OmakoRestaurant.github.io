@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMAKO - Reservas</title>
+    <link rel="icon" type="image/x-icon" href="/img/icono.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+   
+</head>
+<body>
+  <nav class="abajo">
+    <div class="logo">LOGO</div>
+     <input type="checkbox" id="click">
+     <label for="click" class="menu-btn">
+       <i class="fas fa-bars"></i>
+     </label>
+     <ul>
+       <li><a href="index.html">INICIO</a></li>
+       <li><a href="menu.html" >MENÚ</a></li>
+       <li><a href="about.html">SOBRE NOSOTROS</a></li>
+       <li><a class="reservas active" href="reserva.html">RESERVAS</a></li>
+     </ul>
+  </nav>
+  <div class="maincalendar">
+    <div class="hazreserva">
+        <h2>Haz tu reserva seleccionando el día que desees venir a Omako</h2>
+    </div>
+    <div class="calendar-wrapper">
+        <header>
+            <p class="current-date">October 2022</p>
+            <div class="icons">
+                <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                <span id="next" class="material-symbols-rounded">chevron_right</span>
+            </div> 
+        </header>
+        <div class="calendar">
+            <div>
+                <ul class="weeks">
+                    <li>Lu</li>
+                    <li>Ma</li>
+                    <li>Mi</li>
+                    <li>Ju</li>
+                    <li>Vi</li>
+                    <li>Sá</li>
+                    <li>Do</li>
+                </ul>
+                <ul class="days">
+                    <li class="inactive">25</li>
+                    <li class="inactive">26</li>
+                    <li class="inactive">27</li>
+                    <li class="inactive">28</li>
+                    <li class="inactive">29</li>
+                    <li class="inactive">30</li>
+                    <li id="open-booking-time-btn" onclick="openBookingTimeModal()">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>10</li>
+                    <li>11</li>
+                    <li>12</li>
+                    <li>13</li>
+                    <li>14</li>
+                    <li>15</li>
+                    <li>16</li>
+                    <li>17</li>
+                    <li>18</li>
+                    <li>19</li>
+                    <li>20</li>
+                    <li>21</li>
+                    <li>22</li>
+                    <li>23</li>
+                    <li>24</li>
+                    <li class="active">25</li>
+                    <li>26</li>
+                    <li>27</li>
+                    <li>28</li>
+                    <li>29</li>
+                    <li>30</li>
+                    <li>31</li>
+                    <li class="inactive">1</li>
+                    <li class="inactive">2</li>
+                    <li class="inactive">3</li>
+                    <li class="inactive">4</li>
+                    <li class="inactive">5</li>
+                </ul>
+            </div>
+            <!--==================== BOOKING TIME MODAL ====================-->
+            <div class="booking-time-modal" id="booking-time-modal">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div>
+                    <h2>Seleccione una hora</h2>
+                    <p>Elija la hora a la que desea venir al restaurante</p>
+                </div>
+                        <div class="booking-time">
+                            <ul class="booking-time-list">
+                                <li><div class="time-block" id="open-booking-btn" onclick="openBookingModal()">
+                                    9:00AM - 9:30AM</div></li>
+                                <li><div class="time-block">13:00 - 13:30</div></li>
+                                <li><div class="time-block">13:30 - 14:00</div></li>
+                                <li><div class="time-block">14:00 - 14:30</div></li>
+                                <li><div class="time-block">14:30 - 15:00</div></li>
+                                <li><div class="time-block">20:00 - 20:30</div></li>
+                                <li><div class="time-block">20:30 - 21:00</div></li>
+                                <li><div class="time-block">21:00 - 21:30</div></li>
+                                <li><div class="time-block">21:30 - 22:00</div></li>
+                                <li><div class="time-block">22:00 - 22:30</div></li>
+                            </ul>
+                        </div>
+                        <div class="botones">
+                    <button type="button" class="close-btn" onclick="closeBookingTimeModal()">&times;</button>
+                        </div>
+                </div>
+            </div>
+            <!--==================== BOOKING FORM MODAL ====================-->
+            <div class="booking-modal" id="booking-modal">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div>
+                    <h2>Formalario de reserva</h2>
+                    <p>Introduce los datos de la reserva </p>
+                </div>
+                    <form>
+                        <div class="booking-form-container">
+                            <div class="client-name">
+                                <label for="client-name"><h6>Nombre:</h6></label>
+                                <input type="text" id="client-name" name="client-name" required>
+                            </div>
+                            <div class="client-email">
+                                <label for="client-email"><h6>Email:</h6></label>
+                                <input type="email" id="client-email" name="client-email" required>
+                            </div>
+                            <div class="client-phone">
+                                <label for="client-phone"><h6>Número de teléfono:</h6></label>
+                                <input type="tel" id="client-phone" name="client-phone">
+                            </div>
+                            <div class="client-service">
+                                <label for="client-service"><h6>Número de comensales:</h6></label>
+                                <select name="client-service" id="client-service" required>
+                                    <option selected>[Comensales]</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>+7</option>
+                                </select>
+                            </div>
+                            <div class="client-notes">
+                                <label for="client-notes"><h6>Notas:</h6></label>
+                                <br>
+                                <textarea id="client-notes" name="client-notes" rows="4" cols="22" placeholder="Si quiere añadir algo más, hagalo aquí"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="botones">
+                    <button type="button" class="close-btn" onclick="closeBookingModal()">&times;</button>
+                    <a type="button" href="confirmation.html" class="ok-btn">&#10142;</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="mainfooter">
+      <div class="cajafooter">
+        <a href="index.html">Inicio</a>
+        <a href="menu.html">Menú</a>
+        <a href="about.html">Sobre Nosotros</a>
+        <a href="reserva.html">Reservas</a>
+      </div>
+      <div class="cajafooter">
+        <p class="link">Newsletter</p>
+        <a href="https://www.martinberasategui.com/es/inicio" target="_blank">Martín Berasategui</a>
+        <p class="link">Franquicias</p>
+        <p class="link">Trabaja con nosotros</p>
+      </div>
+      <div class="cajafooter">
+        <p>Restaurante Omako</p>
+        <p>c/ Lagasca, 48</p>
+        <p>28001, Madrid</p>
+        <p>678 34 53 20</p>
+      </div>
+      <div class="iconosfooter">
+          <ul class="icons">
+            <li><a href="https://twitter.com/OmakoOficial" class="icon brands fa-twitter" ><span class="label">Twitter</span></a></li>
+            <li><a href="https://www.facebook.com/OmakoOficial" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/OmakoOficial/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="https://www.tiktok.com/@OmakoOficiallang=es" class="icon brands fa-tiktok" ><span class="label">Tiktok</span></a></li>
+          </ul>
+      </div>
+  </div>
+  <div class="footerexpan">
+    <p>Contacto</p>
+    <p>Política de Privacidad</p>
+    <p>Configurador de Cookies</p>
+    <p>Sitemap</p>
+  </div>
+</footer>
+
+ <script src="js/calendar.js" defer></script>
+        
+        <!--==================== JQUERY ====================-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
